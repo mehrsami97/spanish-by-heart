@@ -1,0 +1,227 @@
+{
+  "brand": { "name": "Mehrsa", "role": "Profesora de Español" },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "classes": "Clases",
+    "testimonials": "Opiniones",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "cta": "Reservar clase"
+  },
+  "home": {
+    "hero": {
+      "badge": "¡Hola! Bienvenidos",
+      "title": "Aprende español",
+      "highlight": "con alegría",
+      "subtitle": "Clases particulares y en grupo con Mehrsa — impartidas en inglés y persa, para que nada se pierda en la traducción. Desde tu primera palabra hasta una conversación fluida.",
+      "ctaPrimary": "Reserva una clase de prueba",
+      "ctaSecondary": "Ver las clases",
+      "stats": [
+        { "num": "+8", "label": "años enseñando" },
+        { "num": "+300", "label": "alumnos felices" },
+        { "num": "3", "label": "idiomas" }
+      ]
+    },
+    "highlights": {
+      "eyebrow": "Por qué aprender conmigo",
+      "title": "Un español que de verdad se queda",
+      "subtitle": "Clases diseñadas según tu forma de aprender — relajadas, organizadas y muy divertidas.",
+      "items": [
+        { "icon": "💬", "title": "Enseñado en tu idioma", "text": "Explicaciones en inglés o persa cuando las necesites, para que la gramática por fin tenga sentido." },
+        { "icon": "🎯", "title": "Un plan hecho para ti", "text": "Cada alumno recibe una ruta adaptada a sus metas, ritmo y nivel — de A1 a C2." },
+        { "icon": "🗣️", "title": "Habla desde el primer día", "text": "Conversación real en cada clase. Pedirás tapas antes de darte cuenta." },
+        { "icon": "📚", "title": "Listo para el examen", "text": "Preparación enfocada en DELE y SIELE, con exámenes de práctica y estrategias probadas." }
+      ]
+    },
+    "about": {
+      "eyebrow": "Hola, soy Mehrsa",
+      "title": "Tu guía cercana al mundo hispanohablante",
+      "text": "Soy profesora de español certificada que se enamoró del idioma y nunca miró atrás. Durante los últimos ocho años he ayudado a alumnos de todo el mundo a pasar de principiantes nerviosos a hablantes seguros — siempre con paciencia, calidez y mucha risa.",
+      "link": "Más sobre mí"
+    },
+    "preview": {
+      "eyebrow": "En qué podemos trabajar",
+      "title": "Clases para cada meta",
+      "link": "Ver todas las clases y precios"
+    },
+    "ctaBanner": {
+      "title": "¿Listo para decir tu primer ¡hola!?",
+      "subtitle": "Reserva una clase de prueba gratuita de 30 minutos. Sin presión, sin compromiso — solo una charla amistosa para planear tu camino con el español.",
+      "cta": "Reserva tu prueba gratis"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Sobre mí",
+      "title": "Hola, soy Mehrsa",
+      "subtitle": "Profesora de español, amante de los idiomas de por vida y tu mayor animadora en el camino hacia la fluidez."
+    },
+    "story": {
+      "title": "Mi historia",
+      "paragraphs": [
+        "Mi viaje con el español empezó como una estudiante curiosa que no podía dejar de ver películas españolas sin subtítulos. Esa curiosidad se convirtió en pasión, y la pasión en una profesión que adoro.",
+        "Tras vivir y estudiar en España, me formé como profesora de idiomas y he pasado los últimos ocho años guiando a alumnos desde el nivel cero hasta el avanzado. Como hablo inglés y persa con fluidez, puedo encontrarte justo donde estás — explicando la gramática difícil en el idioma que te resulte más claro.",
+        "Creo que aprender un idioma debería sentirse como una conversación con un amigo, no como un examen. Mis clases son relajadas, personales y giran completamente en torno a ti."
+      ]
+    },
+    "philosophy": {
+      "eyebrow": "Cómo enseño",
+      "title": "Mi filosofía de enseñanza",
+      "items": [
+        { "title": "La comodidad primero", "text": "Aprendes más rápido cuando estás relajado. Sin juicios, sin miedo a equivocarte — los errores son la forma de crecer." },
+        { "title": "Habla pronto y a menudo", "text": "La gramática importa, pero comunicarse importa más. Empezamos a hablar desde la primera clase." },
+        { "title": "Español real y útil", "text": "Nos centramos en el idioma que de verdad usarás — viajes, trabajo, familia, amigos, la vida." },
+        { "title": "Tu ritmo, tus metas", "text": "No hay dos alumnos iguales. Tu plan se adapta a tu tiempo, nivel y ambiciones." }
+      ]
+    },
+    "credentials": {
+      "eyebrow": "Trayectoria",
+      "title": "Cualificaciones y experiencia",
+      "items": [
+        "Certificación en enseñanza de ELE (Español como Lengua Extranjera)",
+        "Especialista en preparación de exámenes DELE y SIELE",
+        "Más de 8 años enseñando en línea y presencial",
+        "Trilingüe: español, inglés y persa",
+        "Más de 300 alumnos en más de 20 países"
+      ]
+    },
+    "languages": {
+      "title": "Idiomas en los que enseño",
+      "items": [
+        { "flag": "🇪🇸", "name": "Español", "level": "Fluidez nativa" },
+        { "flag": "🇬🇧", "name": "Inglés", "level": "Fluido" },
+        { "flag": "🇮🇷", "name": "Persa", "level": "Nativo" }
+      ]
+    }
+  },
+  "classes": {
+    "hero": {
+      "eyebrow": "Clases y precios",
+      "title": "Encuentra la clase que encaja con tu vida",
+      "subtitle": "Clases flexibles y personales — en línea o presenciales. Elige lo que te funcione y lo moldeamos juntos."
+    },
+    "formats": {
+      "title": "Formas de aprender",
+      "items": [
+        {
+          "icon": "👤",
+          "name": "Particular 1 a 1",
+          "desc": "Clases totalmente personalizadas a tu ritmo, con toda mi atención.",
+          "price": "desde 25€",
+          "unit": "/ hora",
+          "features": ["Plan de aprendizaje a medida", "Horario flexible", "Todos los niveles A1–C2", "Apoyo en inglés o persa"],
+          "featured": true,
+          "badge": "Más popular"
+        },
+        {
+          "icon": "👥",
+          "name": "Grupo reducido",
+          "desc": "Aprende con 2–4 personas de nivel similar. Divertido, social y económico.",
+          "price": "desde 15€",
+          "unit": "/ hora",
+          "features": ["Máximo 4 alumnos", "Sesiones semanales", "Materiales compartidos", "Práctica de conversación"],
+          "featured": false,
+          "badge": ""
+        },
+        {
+          "icon": "📝",
+          "name": "Preparación de examen",
+          "desc": "Preparación enfocada para DELE y SIELE con exámenes de práctica y estrategia.",
+          "price": "desde 30€",
+          "unit": "/ hora",
+          "features": ["Enfoque DELE y SIELE", "Exámenes de práctica", "Corrección de escritura", "Estrategias probadas"],
+          "featured": false,
+          "badge": ""
+        }
+      ]
+    },
+    "levels": {
+      "eyebrow": "Todos los niveles bienvenidos",
+      "title": "De tu primera palabra a la fluidez",
+      "items": [
+        { "code": "A1–A2", "name": "Principiante", "text": "Construye una base sólida — saludos, frases cotidianas y la confianza para empezar." },
+        { "code": "B1–B2", "name": "Intermedio", "text": "Mantén conversaciones reales, expresa opiniones y maneja situaciones cotidianas con soltura." },
+        { "code": "C1–C2", "name": "Avanzado", "text": "Pule tu fluidez, domina los matices y suena natural en cualquier contexto." }
+      ]
+    },
+    "process": {
+      "eyebrow": "Cómo funciona",
+      "title": "Empezar es muy fácil",
+      "items": [
+        { "step": "01", "title": "Prueba gratis", "text": "Nos vemos 30 minutos para hablar de tus metas y comprobar tu nivel." },
+        { "step": "02", "title": "Tu plan", "text": "Diseño un plan de aprendizaje personalizado según tus metas y horario." },
+        { "step": "03", "title": "A aprender", "text": "Empezamos tus clases — hablando español desde la primera." },
+        { "step": "04", "title": "Crece y disfruta", "text": "Sigue tu progreso y verás tu confianza despegar, clase tras clase." }
+      ]
+    }
+  },
+  "testimonials": {
+    "hero": {
+      "eyebrow": "Opiniones",
+      "title": "Adorada por los alumnos",
+      "subtitle": "Unas palabras de alumnos que empezaron justo donde tú estás ahora."
+    },
+    "items": [
+      { "name": "Sara M.", "role": "Principiante, Toronto", "quote": "Mehrsa hizo que el español fuera fácil y divertido. Poder preguntar en persa lo cambió todo para mí. ¡De verdad espero con ganas mis clases!" },
+      { "name": "James P.", "role": "Intermedio, Londres", "quote": "La mejor profesora que he tenido. Paciente, motivadora y muy organizada. Pasé de frases sueltas a conversaciones reales en meses." },
+      { "name": "Niloofar K.", "role": "Alumna DELE B2", "quote": "Aprobé mi DELE B2 gracias a la preparación de Mehrsa. Los exámenes de práctica y las correcciones fueron perfectos. La recomiendo sin dudar." },
+      { "name": "Diego R.", "role": "Avanzado, Madrid", "quote": "Incluso en nivel avanzado me empujó a sonar más natural. Las clases son relajadas pero de verdad mejoras cada vez." },
+      { "name": "Anita S.", "role": "Principiante, Berlín", "quote": "Me aterraba hablar. Mehrsa creó un espacio tan seguro y cálido que en semanas ya charlaba. Eternamente agradecida." },
+      { "name": "Mohammad T.", "role": "Intermedio, Teherán", "quote": "Aprender español con explicaciones en persa lo cambió todo. Por fin encajó todo. ¡Gracias, Mehrsa!" }
+    ]
+  },
+  "faq": {
+    "hero": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Tus dudas, resueltas",
+      "subtitle": "Todo lo que quizá quieras saber antes de tu primera clase. ¿Sigues con curiosidad? Solo escríbeme."
+    },
+    "items": [
+      { "q": "Soy principiante total — ¿no pasa nada?", "a": "¡Para nada! La mayoría de mis alumnos empiezan desde cero. Iremos a un ritmo cómodo y te explicaré todo en inglés o persa para que nunca te pierdas." },
+      { "q": "¿En qué idiomas puedes enseñar?", "a": "Enseño español a través del inglés o el persa — el que te resulte más cómodo. Incluso podemos mezclar los dos si ayuda." },
+      { "q": "¿Las clases son en línea o presenciales?", "a": "¡Ambas! La mayoría aprende en línea por videollamada, que es flexible y funciona en cualquier lugar. Las clases presenciales pueden estar disponibles según la ubicación." },
+      { "q": "¿Cuánto dura cada clase?", "a": "Las clases estándar son de 60 minutos, pero también ofrezco sesiones de 45 y 90 minutos. Encontraremos lo que mejor se ajuste a ti." },
+      { "q": "¿Ayudas con los exámenes DELE o SIELE?", "a": "¡Sí! Ofrezco preparación dedicada con exámenes de práctica, corrección de escritura y estrategias probadas para cada nivel." },
+      { "q": "¿Cómo se paga y cuál es la política de cancelación?", "a": "El pago suele ser por clase o en paquetes. Las clases pueden reprogramarse avisando con al menos 24 horas. Veremos los detalles en tu prueba gratuita." },
+      { "q": "¿Y si necesito tomarme un descanso?", "a": "¡La vida pasa! Solo avísame y pausamos tus clases. Tu progreso y tu plan estarán aquí cuando estés listo para volver." }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Ponte en contacto",
+      "title": "Empecemos tu viaje con el español",
+      "subtitle": "Reserva tu clase de prueba gratis o simplemente di hola. Suelo responder en un día."
+    },
+    "form": {
+      "name": "Tu nombre",
+      "namePlaceholder": "p. ej. Sara",
+      "email": "Correo",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "level": "Tu nivel actual",
+      "levelOptions": ["Principiante total", "Principiante A1–A2", "Intermedio B1–B2", "Avanzado C1–C2", "No estoy seguro"],
+      "language": "Idioma preferido para la clase",
+      "languageOptions": ["Inglés", "Persa", "Cualquiera está bien"],
+      "message": "Tu mensaje",
+      "messagePlaceholder": "Cuéntame un poco sobre tus metas…",
+      "submit": "Enviar mensaje",
+      "success": "¡Gracias! Tu mensaje va en camino. Me pondré en contacto muy pronto. ✨"
+    },
+    "direct": {
+      "title": "¿Prefieres contactar directamente?",
+      "email": "Correo",
+      "whatsapp": "WhatsApp",
+      "response": "Tiempo de respuesta",
+      "responseValue": "En 24 horas",
+      "social": "Sígueme"
+    }
+  },
+  "footer": {
+    "tagline": "Clases de español cercanas y personales en inglés y persa. Tu camino hacia la fluidez empieza aquí.",
+    "explore": "Explora",
+    "contact": "Contacto",
+    "follow": "Sígueme",
+    "rights": "Todos los derechos reservados.",
+    "made": "Hecho con ☕ y amor por los idiomas."
+  }
+}

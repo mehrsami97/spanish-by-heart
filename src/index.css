@@ -1,0 +1,322 @@
+/* ============================================================
+   Mehrsa — Design tokens + global base
+   Peach / warm-cream theme
+   ============================================================ */
+
+:root {
+  /* --- Peach palette --- */
+  --peach-50: #fff8f3;
+  --peach-100: #ffeede;
+  --peach-200: #ffdcc4;
+  --peach-300: #ffc3a0;
+  --peach-400: #ff9e7a;
+  --peach-500: #f97b54;
+  --peach-600: #e85f38;
+  --peach-700: #c44a2a;
+
+  --cream: #fffaf6;
+  --brown-900: #3d2b26;
+  --brown-700: #5c453d;
+  --brown-500: #87695e;
+  --brown-300: #b6a097;
+
+  /* --- Semantic tokens --- */
+  --bg: var(--cream);
+  --bg-alt: var(--peach-50);
+  --surface: #ffffff;
+  --surface-warm: var(--peach-100);
+  --text-h: var(--brown-900);
+  --text: var(--brown-700);
+  --text-muted: var(--brown-500);
+  --primary: var(--peach-500);
+  --primary-hover: var(--peach-600);
+  --primary-soft: var(--peach-200);
+  --accent: #6fae9f; /* sage — complementary calm accent */
+  --border: #f3e2d6;
+  --border-strong: #ecd2c1;
+
+  /* --- Effects --- */
+  --shadow-sm: 0 2px 8px rgba(196, 74, 42, 0.06);
+  --shadow-md: 0 12px 30px -12px rgba(196, 74, 42, 0.22);
+  --shadow-lg: 0 28px 60px -24px rgba(196, 74, 42, 0.28);
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* --- Type --- */
+  --sans: 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+  /* --- Layout --- */
+  --maxw: 1180px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --nav-h: 76px;
+
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Persian / RTL uses Vazirmatn */
+:root[dir='rtl'] {
+  --sans: 'Vazirmatn', system-ui, sans-serif;
+  --serif: 'Vazirmatn', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  color: var(--text-h);
+  line-height: 1.12;
+  margin: 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  letter-spacing: -0.015em;
+}
+h3 {
+  font-size: 1.35rem;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--primary-hover);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+a:hover {
+  color: var(--peach-700);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary-400, var(--primary));
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---- Shared layout helpers ---- */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.section--alt {
+  background: var(--bg-alt);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary-hover);
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+.section-head {
+  max-width: 62ch;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease,
+    color 0.18s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+.btn--primary:hover {
+  background: var(--primary-hover);
+  color: #fff;
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--primary-hover);
+  border-color: var(--border-strong);
+}
+.btn--ghost:hover {
+  background: var(--surface-warm);
+  color: var(--peach-700);
+}
+.btn--light {
+  background: #fff;
+  color: var(--primary-hover);
+}
+.btn--light:hover {
+  color: var(--peach-700);
+}
+
+/* ---- Card ---- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.card--hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Pill / badge ---- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-warm);
+  color: var(--peach-700);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ---- Skip link (a11y) ---- */
+.skip-link {
+  position: absolute;
+  inset-inline-start: 1rem;
+  top: -100px;
+  z-index: 200;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+  color: #fff;
+}
+
+/* ---- Page intro (shared hero for inner pages) ---- */
+.page-hero {
+  padding-block: clamp(3rem, 7vw, 5rem);
+  background:
+    radial-gradient(
+      120% 120% at 100% 0%,
+      var(--peach-100) 0%,
+      transparent 55%
+    ),
+    var(--bg);
+  text-align: center;
+}
+.page-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Reveal-on-scroll animation ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "brand": { "name": "Mehrsa", "role": "Spanish Teacher" },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "classes": "Classes",
+    "testimonials": "Reviews",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Book a lesson"
+  },
+  "home": {
+    "hero": {
+      "badge": "¡Hola! Bienvenidos",
+      "title": "Learn Spanish",
+      "highlight": "the joyful way",
+      "subtitle": "Private and group lessons with Mehrsa — taught in English and Persian, so nothing gets lost in translation. From your very first word to fluent conversation.",
+      "ctaPrimary": "Book a free trial",
+      "ctaSecondary": "Explore classes",
+      "stats": [
+        { "num": "8+", "label": "years teaching" },
+        { "num": "300+", "label": "happy students" },
+        { "num": "3", "label": "languages spoken" }
+      ]
+    },
+    "highlights": {
+      "eyebrow": "Why learn with me",
+      "title": "Spanish that actually sticks",
+      "subtitle": "Lessons built around how you learn best — relaxed, structured, and genuinely fun.",
+      "items": [
+        {
+          "icon": "💬",
+          "title": "Taught in your language",
+          "text": "Explanations in English or Persian whenever you need them, so grammar finally makes sense."
+        },
+        {
+          "icon": "🎯",
+          "title": "A plan made for you",
+          "text": "Every learner gets a roadmap matched to their goals, pace, and level — A1 to C2."
+        },
+        {
+          "icon": "🗣️",
+          "title": "Speak from day one",
+          "text": "Real conversation in every lesson. You'll be ordering tapas before you know it."
+        },
+        {
+          "icon": "📚",
+          "title": "Exam ready",
+          "text": "Focused prep for DELE and SIELE, with mock tests and proven strategies."
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "Hola, soy Mehrsa",
+      "title": "Your friendly guide to the Spanish-speaking world",
+      "text": "I'm a certified Spanish teacher who fell in love with the language and never looked back. For the past eight years I've helped students across the world go from nervous beginners to confident speakers — always with patience, warmth, and a lot of laughter.",
+      "link": "More about me"
+    },
+    "preview": {
+      "eyebrow": "What we can work on",
+      "title": "Classes for every goal",
+      "link": "See all classes & pricing"
+    },
+    "ctaBanner": {
+      "title": "Ready to say your first ¡hola!?",
+      "subtitle": "Book a free 30-minute trial lesson. No pressure, no commitment — just a friendly chat to plan your Spanish journey.",
+      "cta": "Book your free trial"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About me",
+      "title": "Hi, I'm Mehrsa",
+      "subtitle": "Spanish teacher, lifelong language lover, and your biggest cheerleader on the road to fluency."
+    },
+    "story": {
+      "title": "My story",
+      "paragraphs": [
+        "My journey with Spanish began as a curious student who couldn't stop watching Spanish films without subtitles. That curiosity turned into a passion, and the passion turned into a career I adore.",
+        "After living and studying in Spain, I trained as a language teacher and have spent the last eight years guiding learners from absolute beginner to advanced. Because I speak English and Persian fluently, I can meet you exactly where you are — explaining tricky grammar in the language that clicks for you.",
+        "I believe learning a language should feel like a conversation with a friend, not a test. My lessons are relaxed, personal, and built entirely around you."
+      ]
+    },
+    "philosophy": {
+      "eyebrow": "How I teach",
+      "title": "My teaching philosophy",
+      "items": [
+        { "title": "Comfort first", "text": "You learn fastest when you're relaxed. No judgement, no fear of mistakes — mistakes are how we grow." },
+        { "title": "Speak early, speak often", "text": "Grammar matters, but communication matters more. We start speaking from lesson one." },
+        { "title": "Real, useful Spanish", "text": "We focus on the language you'll actually use — travel, work, family, friends, life." },
+        { "title": "Your pace, your goals", "text": "No two students are alike. Your plan flexes to fit your time, level, and ambitions." }
+      ]
+    },
+    "credentials": {
+      "eyebrow": "Background",
+      "title": "Qualifications & experience",
+      "items": [
+        "ELE (Spanish as a Foreign Language) teaching certification",
+        "DELE & SIELE exam preparation specialist",
+        "8+ years of online and in-person teaching",
+        "Trilingual: Spanish, English & Persian",
+        "300+ students taught across 20+ countries"
+      ]
+    },
+    "languages": {
+      "title": "Languages I teach in",
+      "items": [
+        { "flag": "🇪🇸", "name": "Spanish", "level": "Native fluency" },
+        { "flag": "🇬🇧", "name": "English", "level": "Fluent" },
+        { "flag": "🇮🇷", "name": "Persian", "level": "Native" }
+      ]
+    }
+  },
+  "classes": {
+    "hero": {
+      "eyebrow": "Classes & pricing",
+      "title": "Find the class that fits your life",
+      "subtitle": "Flexible, personal lessons — online or in person. Choose what works for you, and we'll shape it together."
+    },
+    "formats": {
+      "title": "Ways to learn",
+      "items": [
+        {
+          "icon": "👤",
+          "name": "Private 1-on-1",
+          "desc": "Fully personalised lessons at your pace, with my undivided attention.",
+          "price": "from €25",
+          "unit": "/ hour",
+          "features": ["Custom learning plan", "Flexible scheduling", "All levels A1–C2", "English or Persian support"],
+          "featured": true,
+          "badge": "Most popular"
+        },
+        {
+          "icon": "👥",
+          "name": "Small group",
+          "desc": "Learn with 2–4 others at a similar level. Fun, social, and great value.",
+          "price": "from €15",
+          "unit": "/ hour",
+          "features": ["Max 4 students", "Weekly sessions", "Shared materials", "Conversation practice"],
+          "featured": false,
+          "badge": ""
+        },
+        {
+          "icon": "📝",
+          "name": "Exam prep",
+          "desc": "Targeted preparation for DELE & SIELE with mock exams and strategy.",
+          "price": "from €30",
+          "unit": "/ hour",
+          "features": ["DELE & SIELE focus", "Mock tests", "Writing feedback", "Proven strategies"],
+          "featured": false,
+          "badge": ""
+        }
+      ]
+    },
+    "levels": {
+      "eyebrow": "All levels welcome",
+      "title": "From your first word to fluency",
+      "items": [
+        { "code": "A1–A2", "name": "Beginner", "text": "Build a solid foundation — greetings, everyday phrases, and the confidence to start." },
+        { "code": "B1–B2", "name": "Intermediate", "text": "Hold real conversations, express opinions, and handle everyday situations with ease." },
+        { "code": "C1–C2", "name": "Advanced", "text": "Polish fluency, master nuance, and sound natural in any context." }
+      ]
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "Getting started is easy",
+      "items": [
+        { "step": "01", "title": "Free trial", "text": "We meet for 30 minutes to chat about your goals and check your level." },
+        { "step": "02", "title": "Your plan", "text": "I design a personalised learning plan around your goals and schedule." },
+        { "step": "03", "title": "Start learning", "text": "We begin your lessons — speaking Spanish from the very first one." },
+        { "step": "04", "title": "Grow & thrive", "text": "Track your progress and watch your confidence soar, lesson by lesson." }
+      ]
+    }
+  },
+  "testimonials": {
+    "hero": {
+      "eyebrow": "Reviews",
+      "title": "Loved by learners",
+      "subtitle": "A few words from students who started exactly where you are now."
+    },
+    "items": [
+      { "name": "Sara M.", "role": "Beginner, Toronto", "quote": "Mehrsa made Spanish feel easy and fun. Being able to ask questions in Persian made all the difference for me. I actually look forward to my lessons!" },
+      { "name": "James P.", "role": "Intermediate, London", "quote": "The best teacher I've ever had. Patient, encouraging, and so well organised. I went from broken phrases to real conversations in months." },
+      { "name": "Niloofar K.", "role": "DELE B2 student", "quote": "I passed my DELE B2 thanks to Mehrsa's prep. The mock exams and feedback were spot on. Couldn't recommend her more." },
+      { "name": "Diego R.", "role": "Advanced, Madrid", "quote": "Even at an advanced level she pushed me to sound more natural. Lessons are relaxed but you genuinely improve every single time." },
+      { "name": "Anita S.", "role": "Beginner, Berlin", "quote": "I was terrified of speaking. Mehrsa created such a safe, warm space that I was chatting away within weeks. Forever grateful." },
+      { "name": "Mohammad T.", "role": "Intermediate, Tehran", "quote": "Learning Spanish through Persian explanations was a game changer. Everything finally clicked. ¡Gracias, Mehrsa!" }
+    ]
+  },
+  "faq": {
+    "hero": {
+      "eyebrow": "FAQ",
+      "title": "Questions, answered",
+      "subtitle": "Everything you might want to know before your first lesson. Still curious? Just reach out."
+    },
+    "items": [
+      { "q": "I'm a total beginner — is that okay?", "a": "Absolutely! Most of my students start from zero. We'll go at a comfortable pace and I'll explain everything in English or Persian so you never feel lost." },
+      { "q": "Which languages can you teach in?", "a": "I teach Spanish through English or Persian — whichever you're most comfortable with. We can even mix both if that helps." },
+      { "q": "Are lessons online or in person?", "a": "Both! Most students learn online over video call, which is flexible and works anywhere. In-person lessons may be available depending on location." },
+      { "q": "How long is each lesson?", "a": "Standard lessons are 60 minutes, but I also offer 45 and 90-minute sessions. We'll find what suits your attention and schedule best." },
+      { "q": "Do you help with DELE or SIELE exams?", "a": "Yes! I offer dedicated exam preparation with mock tests, writing feedback, and proven strategies for every level." },
+      { "q": "How do I pay, and what's your cancellation policy?", "a": "Payment is usually per lesson or in packages. Lessons can be rescheduled with at least 24 hours' notice. We'll sort out the details during your free trial." },
+      { "q": "What if I need to take a break?", "a": "Life happens! Just let me know and we'll pause your lessons. Your progress and plan will be right here when you're ready to return." }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Get in touch",
+      "title": "Let's start your Spanish journey",
+      "subtitle": "Book your free trial or just say hola. I usually reply within a day."
+    },
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "e.g. Sara",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "level": "Your current level",
+      "levelOptions": ["Complete beginner", "A1–A2 Beginner", "B1–B2 Intermediate", "C1–C2 Advanced", "Not sure"],
+      "language": "Preferred lesson language",
+      "languageOptions": ["English", "Persian", "Either is fine"],
+      "message": "Your message",
+      "messagePlaceholder": "Tell me a little about your goals…",
+      "submit": "Send message",
+      "success": "Thank you! Your message is on its way. I'll be in touch very soon. ✨"
+    },
+    "direct": {
+      "title": "Prefer to reach out directly?",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "response": "Response time",
+      "responseValue": "Within 24 hours",
+      "social": "Follow along"
+    }
+  },
+  "footer": {
+    "tagline": "Friendly, personal Spanish lessons in English and Persian. Your journey to fluency starts here.",
+    "explore": "Explore",
+    "contact": "Contact",
+    "follow": "Follow",
+    "rights": "All rights reserved.",
+    "made": "Made with ☕ and a love for languages."
+  }
+}
