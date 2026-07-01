@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import SEO from './components/SEO.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Classes from './pages/Classes.jsx';
@@ -21,6 +22,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <>
+      <SEO />
       <ScrollToTop />
       <a className="skip-link" href="#main">
         Skip to content

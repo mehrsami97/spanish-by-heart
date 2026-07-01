@@ -7,6 +7,7 @@ export default function Home() {
   const { t } = useTranslation();
   const stats = t('home.hero.stats', { returnObjects: true });
   const highlights = t('home.highlights.items', { returnObjects: true });
+  const localSearchTerms = t('home.localSearch.terms', { returnObjects: true });
   const testimonials = t('testimonials.items', { returnObjects: true }).slice(0, 3);
 
   return (
@@ -80,6 +81,24 @@ export default function Home() {
                 <h3>{h.title}</h3>
                 <p>{h.text}</p>
               </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Local SEO ---------- */}
+      <section className="section section--alt">
+        <div className="container">
+          <Reveal className="section-head section-head--center">
+            <span className="eyebrow">{t('home.localSearch.eyebrow')}</span>
+            <h2>{t('home.localSearch.title')}</h2>
+            <p className="lead" style={{ marginInline: 'auto' }}>
+              {t('home.localSearch.text')}
+            </p>
+          </Reveal>
+          <div className="seo-terms" aria-label={t('home.localSearch.termsLabel')}>
+            {localSearchTerms.map((term) => (
+              <span key={term}>{term}</span>
             ))}
           </div>
         </div>

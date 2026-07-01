@@ -173,6 +173,28 @@
   font-size: 0.97rem;
 }
 
+.seo-terms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.seo-terms span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
 /* ================= About strip ================= */
 .about-strip {
   display: grid;
