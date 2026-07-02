@@ -12,6 +12,8 @@ export const LANGS = {
   es: { label: 'Español', flag: '🇪🇸', dir: 'ltr' },
 };
 
+const DEFAULT_LANGUAGE = 'fa';
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -21,12 +23,18 @@ i18n
       fa: { translation: fa },
       es: { translation: es },
     },
-    fallbackLng: 'en',
+    fallbackLng: DEFAULT_LANGUAGE,
     supportedLngs: Object.keys(LANGS),
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
+      order: ['cookie'],
+      caches: ['cookie'],
+      lookupCookie: 'i18next',
+      cookieMinutes: 60 * 24 * 365,
+      cookieOptions: {
+        path: '/',
+        sameSite: 'strict',
+      },
     },
   });
 
@@ -37,7 +45,7 @@ function applyDir(lng) {
   root.setAttribute('lang', lng);
   root.setAttribute('dir', meta.dir);
 }
-applyDir(i18n.resolvedLanguage || 'en');
+applyDir(i18n.resolvedLanguage || DEFAULT_LANGUAGE);
 i18n.on('languageChanged', applyDir);
 
 export default i18n;
