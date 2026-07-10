@@ -51,7 +51,14 @@ export default function Home() {
               </span>
               <div className="hero__photo-note">¡Hola!</div>
             </div>
-            <div className="hero__chip hero__chip--1">🇪🇸 Español</div>
+            <div className="hero__chip hero__chip--1 hero__chip--flag">
+              <span className="spain-flag" role="img" aria-label="Spain flag">
+                <span className="spain-flag__stripe spain-flag__stripe--red" />
+                <span className="spain-flag__stripe spain-flag__stripe--gold" />
+                <span className="spain-flag__stripe spain-flag__stripe--red" />
+              </span>
+              <span>Español</span>
+            </div>
             <div className="hero__chip hero__chip--2">A1 → C2</div>
             <div className="hero__chip hero__chip--3">⭐ 4.9/5</div>
           </div>
