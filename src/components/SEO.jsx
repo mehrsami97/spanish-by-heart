@@ -8,19 +8,19 @@ const DEFAULT_IMAGE = `${SITE_URL}/social-preview.svg`;
 
 const pageMeta = {
   '/': {
-    title: 'Spanish Lessons in Yerevan | Spanish by Heart with Mehrsa',
+    title: 'Online Spanish Lessons Worldwide | Spanish by Heart with Mehrsa',
     description:
-      'Private and group Spanish lessons in Yerevan with Mehrsa. Learn Spanish in English or Persian, online or in person, from A1 beginner to C2 and DELE/SIELE exam prep.',
+      'Online Spanish lessons with Mehrsa for students worldwide. Learn Spanish in English or Persian, from A1 beginner to C2, with conversation practice and DELE/SIELE exam prep.',
   },
   '/about': {
-    title: 'About Mehrsa | Spanish Teacher in Yerevan',
+    title: 'About Mehrsa | Online Spanish Teacher',
     description:
-      'Meet Mehrsa, a trilingual Spanish teacher offering friendly Spanish lessons in Yerevan for English and Persian speakers.',
+      'Meet Mehrsa, a trilingual online Spanish teacher offering friendly lessons for English and Persian speakers worldwide.',
   },
   '/classes': {
-    title: 'Spanish Classes in Yerevan | Private, Group and Exam Prep',
+    title: 'Online Spanish Classes | Private, Group and Exam Prep',
     description:
-      'Choose private Spanish lessons, small group Spanish classes, or DELE and SIELE preparation in Yerevan. Lessons available in English or Persian.',
+      'Choose private online Spanish lessons, small group Spanish classes, conversation practice, or DELE and SIELE preparation in English or Persian.',
   },
   '/testimonials': {
     title: 'Student Reviews | Spanish Lessons with Mehrsa',
@@ -28,34 +28,36 @@ const pageMeta = {
       'Read student reviews for Spanish lessons with Mehrsa, including Persian and English-speaking learners from beginner to advanced levels.',
   },
   '/faq': {
-    title: 'Spanish Lessons FAQ | Yerevan, Online, English and Persian',
+    title: 'Online Spanish Lessons FAQ | English and Persian Support',
     description:
-      'Answers about Spanish lessons in Yerevan, online classes, Persian and English instruction, lesson levels, pricing, scheduling, DELE and SIELE prep.',
+      'Answers about online Spanish classes, Persian and English instruction, lesson levels, pricing, scheduling, DELE and SIELE prep.',
   },
   '/contact': {
-    title: 'Book Spanish Lessons in Yerevan | Contact Mehrsa',
+    title: 'Book Online Spanish Lessons | Contact Mehrsa',
     description:
-      'Book a free trial Spanish lesson in Yerevan with Mehrsa. Private and group lessons for English and Persian speakers.',
+      'Book a free trial online Spanish lesson with Mehrsa. Private and group lessons for English and Persian speakers worldwide.',
   },
 };
 
 const persianKeywords = [
-  'کلاس اسپانیایی در ایروان',
-  'آموزش زبان اسپانیایی در ایروان',
-  'معلم اسپانیایی در ایروان',
-  'کلاس خصوصی اسپانیایی ایروان',
-  'یادگیری اسپانیایی به فارسی در ایروان',
+  'کلاس آنلاین اسپانیایی',
+  'آموزش آنلاین زبان اسپانیایی',
+  'معلم آنلاین اسپانیایی',
+  'کلاس خصوصی آنلاین اسپانیایی',
+  'یادگیری اسپانیایی با توضیح فارسی',
 ];
 
 const englishKeywords = [
-  'Spanish lessons in Yerevan',
-  'Spanish classes Yerevan',
-  'Spanish teacher Yerevan',
-  'private Spanish tutor Yerevan',
-  'learn Spanish in Armenia',
+  'online Spanish lessons',
+  'online Spanish classes',
+  'Spanish teacher online',
+  'private online Spanish tutor',
+  'learn Spanish online',
+  'Spanish lessons worldwide',
   'Spanish lessons for Persian speakers',
-  'DELE preparation Yerevan',
-  'SIELE preparation Yerevan',
+  'Spanish conversation classes online',
+  'DELE preparation online',
+  'SIELE preparation online',
 ];
 
 function setMeta(selector, attrs) {
@@ -111,14 +113,8 @@ export default function SEO() {
       identifiers: { name: 'keywords' },
       content: [...englishKeywords, ...persianKeywords].join(', '),
     });
-    setMeta('meta[name="geo.region"]', {
-      identifiers: { name: 'geo.region' },
-      content: 'AM-ER',
-    });
-    setMeta('meta[name="geo.placename"]', {
-      identifiers: { name: 'geo.placename' },
-      content: 'Yerevan, Armenia',
-    });
+    document.head.querySelector('meta[name="geo.region"]')?.remove();
+    document.head.querySelector('meta[name="geo.placename"]')?.remove();
     setMeta('meta[name="robots"]', {
       identifiers: { name: 'robots' },
       content: 'index, follow, max-image-preview:large',
@@ -174,23 +170,15 @@ export default function SEO() {
     const graph = [
       {
         '@context': 'https://schema.org',
-        '@type': ['LocalBusiness', 'EducationalOrganization'],
-        '@id': `${SITE_URL}/#spanish-lessons-yerevan`,
+        '@type': ['EducationalOrganization'],
+        '@id': `${SITE_URL}/#online-spanish-lessons`,
         name: SITE_NAME,
         alternateName: ['Mehrsa Spanish Teacher', 'Mehrsa', ...persianKeywords],
         url: SITE_URL,
         image: DEFAULT_IMAGE,
         description:
-          'Spanish lessons in Yerevan for English and Persian speakers, including private lessons, small group classes, conversation practice, and DELE/SIELE preparation.',
-        areaServed: [
-          { '@type': 'City', name: 'Yerevan' },
-          { '@type': 'Country', name: 'Armenia' },
-        ],
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Yerevan',
-          addressCountry: 'AM',
-        },
+          'Online Spanish lessons for students worldwide, including private lessons, small group classes, conversation practice, and DELE/SIELE preparation with English or Persian support.',
+        areaServed: { '@type': 'Place', name: 'Worldwide' },
         founder: {
           '@type': 'Person',
           name: 'Mehrsa',
@@ -199,10 +187,10 @@ export default function SEO() {
         },
         knowsLanguage: ['Spanish', 'English', 'Persian'],
         makesOffer: [
-          { '@type': 'Offer', name: 'Private Spanish lessons in Yerevan' },
-          { '@type': 'Offer', name: 'Small group Spanish classes in Yerevan' },
-          { '@type': 'Offer', name: 'DELE and SIELE exam preparation' },
-          { '@type': 'Offer', name: 'کلاس اسپانیایی در ایروان' },
+          { '@type': 'Offer', name: 'Private online Spanish lessons' },
+          { '@type': 'Offer', name: 'Small group online Spanish classes' },
+          { '@type': 'Offer', name: 'Online DELE and SIELE exam preparation' },
+          { '@type': 'Offer', name: 'کلاس آنلاین اسپانیایی' },
         ],
         keywords: [...englishKeywords, ...persianKeywords],
       },
