@@ -31,7 +31,7 @@
   aspect-ratio: 200 / 150;
 }
 
-/* 4 units taller than the grid (154 vs 150) so the sole hangs below it while
+/* 10 units taller than the grid (160 vs 150) so the sole hangs below it while
    the vertical unit stays identical — the leather keeps lining up with the
    cell boundaries. */
 .boot__outline {
@@ -39,7 +39,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 102.7%;
+  height: 106.7%;
   overflow: visible;
 }
 
@@ -111,7 +111,7 @@
   align-items: center;
   justify-content: center;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   animation: boot-cell-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -121,11 +121,13 @@
   font-weight: 700;
 }
 
-/* The toe's centre sits right of the column's centre, so nudge the plural
-   third-person label over to sit on it. Padding rather than a transform,
-   which the entry animation owns. */
+/* Neither the shaft nor the toe is centred on its column, so nudge the labels
+   onto them. Padding rather than a transform, which the entry animation owns. */
+.boot--shaped .boot__cell:nth-child(odd) {
+  padding-inline-end: 11%;
+}
 .boot--shaped .boot__cell:last-child {
-  padding-inline-start: 26%;
+  padding-inline-start: 12%;
 }
 
 /* No boot shape for this group, so mark the changing cells individually. */
