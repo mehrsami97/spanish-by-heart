@@ -263,7 +263,7 @@
     },
     "toolbar": {
       "search": "Search a verb or meaning… (cerrar, sleep, poder)",
-      "quiz": "Quiz mode",
+      "quiz": "Quiz",
       "expandAll": "Expand all",
       "collapseAll": "Collapse all",
       "results_one": "{{count}} matching verb",
@@ -279,7 +279,7 @@
         "Start with the <b>cheat sheet</b> below — the 13 types with their pattern and one model verb each. That single table is the whole system.",
         "Take one type at a time. Read the rule, then the memory hook, then look at <b>the boot</b>: the four forms that change sit inside it, <i>nosotros</i> and <i>vosotros</i> stay outside.",
         "Open a verb and read the six forms out loud. The <b>red underlined letters</b> are the only part you have to remember — everything else follows the normal endings.",
-        "Then switch to <b>Quiz mode</b> and produce the forms from memory. Redo only the ones you missed."
+        "Then switch to the <b>Quiz</b> and produce the forms from memory. Redo only the ones you missed."
       ]
     },
     "cheat": {
@@ -307,7 +307,7 @@
     },
     "quiz": {
       "eyebrow": "Practice",
-      "title": "Quiz mode",
+      "title": "Quiz",
       "subtitle": "Pick what to drill and how you want to answer. Questions favour the forms that actually change.",
       "close": "Close quiz",
       "scope": "Types to drill",

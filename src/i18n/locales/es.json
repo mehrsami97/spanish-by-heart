@@ -246,7 +246,7 @@
     },
     "toolbar": {
       "search": "Busca un verbo o su significado… (cerrar, dormir, poder)",
-      "quiz": "Modo test",
+      "quiz": "Test",
       "expandAll": "Abrir todo",
       "collapseAll": "Cerrar todo",
       "results_one": "{{count}} verbo encontrado",
@@ -262,7 +262,7 @@
         "Empieza por la <b>chuleta</b> de abajo: los 13 tipos con su patrón y un verbo modelo para cada uno. Esa tabla es todo el sistema.",
         "Ve tipo por tipo. Lee la regla, luego el truco de memoria y después mira <b>la bota</b>: las cuatro formas que cambian van dentro, <i>nosotros</i> y <i>vosotros</i> se quedan fuera.",
         "Abre un verbo y lee las seis formas en voz alta. Las <b>letras rojas subrayadas</b> son lo único que hay que recordar; el resto sigue las terminaciones normales.",
-        "Después entra en <b>Modo test</b> y produce las formas de memoria. Repite solo las que falles."
+        "Después entra en el <b>Test</b> y produce las formas de memoria. Repite solo las que falles."
       ]
     },
     "cheat": {
@@ -290,7 +290,7 @@
     },
     "quiz": {
       "eyebrow": "Práctica",
-      "title": "Modo test",
+      "title": "Test",
       "subtitle": "Elige qué practicar y cómo responder. Las preguntas se centran en las formas que sí cambian.",
       "close": "Cerrar el test",
       "scope": "Tipos a practicar",
