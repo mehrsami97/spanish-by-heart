@@ -278,7 +278,8 @@
       "title": "Ir a un tipo"
     },
     "boot": {
-      "title": "la bota"
+      "title": "la bota",
+      "changes": "qué cambia"
     },
     "verb": {
       "yo": "yo →"

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Reveal from '../components/Reveal.jsx';
 import Collapse from '../components/Collapse.jsx';
+import BootDiagram from '../components/BootDiagram.jsx';
 import VerbQuiz from '../components/VerbQuiz.jsx';
 import { Form, Rich } from '../components/RichText.jsx';
 import { isIrregular, plainForm } from '../utils/verbText.js';
@@ -329,26 +330,11 @@ export default function IrregularVerbs() {
                     <Rich text={group.mnemonic} />
                   </div>
 
-                  {group.boot && (
-                    <div className="vboot">
-                      <span className="vboot__title">
-                        {t('verbs.boot.title')}
-                      </span>
-                      {PRONOUNS.map((pronoun, i) => {
-                        const changes = group.boot.includes(i);
-                        return (
-                          <span
-                            key={pronoun}
-                            className={`vboot__row ${changes ? 'is-changed' : ''}`}
-                            style={{ animationDelay: `${i * 45}ms` }}
-                          >
-                            <i aria-hidden="true">{changes ? '◆' : '·'}</i>
-                            {pronoun}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  )}
+                  <BootDiagram
+                    boot={group.boot}
+                    bootLabel={t('verbs.boot.title')}
+                    changesLabel={t('verbs.boot.changes')}
+                  />
 
                   <div className="vgroup__verbs">
                     {verbs.map((verb) => {

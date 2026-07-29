@@ -25,7 +25,7 @@ export const GROUPS = [
     label: "e → ie",
     pattern: "e > ie",
     rule: "The last <b>e</b> of the stem becomes <b>ie</b> — but only when the stress falls on it.",
-    mnemonic: "Draw a <b>BOOT</b> around the table: the four stressed forms (yo, tú, él, ellos) change; <b>nosotros</b> and <b>vosotros</b> stay outside the boot and keep the plain <b>e</b>. <b>c-e-rrar → c-ie-rro</b>.",
+    mnemonic: "<b>c-e-rrar → c-ie-rro</b>. The stress lands on the stem in the four boot forms, so the <b>e</b> breaks into <b>ie</b>. In <b>nosotros</b> and <b>vosotros</b> the stress moves onto the ending instead — that is why they sit outside the boot and keep the plain <b>e</b>.",
     boot: [0,1,2,5],
     verbs: [
     {

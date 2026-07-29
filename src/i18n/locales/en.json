@@ -295,7 +295,8 @@
       "title": "Jump to a type"
     },
     "boot": {
-      "title": "the boot"
+      "title": "the boot",
+      "changes": "what changes"
     },
     "verb": {
       "yo": "yo →"
