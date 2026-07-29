@@ -28,42 +28,69 @@ function isClassicBoot(boot) {
 }
 
 /**
- * Hand-drawn boot path over a 200×150 grid: a shaft down the left column
- * (x 5–100) and a foot along the bottom row (y 100–145). Every corner is a
- * quadratic curve through the sharp corner as its control point, which rounds
- * convex and concave turns alike — the ankle at (100,100) is the concave one.
+ * Hand-drawn boot over the 2×3 grid of forms, following the shape of the
+ * lesson sketch.
+ *
+ * Coordinates: the cells occupy 200×150 (each cell 100×50), so the shaft's
+ * front edge sits on the column boundary at x=100 and the upper's bottom edge
+ * runs just under the last row. The viewBox is 4 units taller so the sole can
+ * hang below the grid without changing the vertical unit — the leather keeps
+ * lining up with the cell boundaries.
+ *
+ * Enclosed: yo / tú / él down the shaft, ellos in the toe. The instep passes
+ * under nosotros and the toe dome stops short of vosotros, leaving both out.
  */
 function BootOutline() {
   return (
     <svg
       className="boot__outline"
-      viewBox="0 0 200 150"
+      viewBox="0 0 200 154"
       preserveAspectRatio="none"
       aria-hidden="true"
     >
+      {/* Upper: crowned cuff, straight shaft, then the instep — a short edge
+          meeting the shaft and the vamp at a sharp tip on either side —
+          rising into the domed toe that rolls down into the sole. */}
       <path
-        className="boot__shape"
+        className="boot__upper"
         vectorEffect="non-scaling-stroke"
-        d="M 22 5
-           L 92 5
-           Q 100 5 100 22
-           L 100 86
-           Q 100 100 116 100
-           L 176 100
-           Q 195 100 195 122
-           Q 195 145 172 145
-           L 20 145
-           Q 5 145 5 128
-           L 5 20
-           Q 5 5 22 5
+        d="M 10 16
+           C 24 6, 74 4, 100 12
+           L 100 100
+           L 134 104
+           C 146 95, 160 87, 172 88
+           C 184 89, 192 102, 192 120
+           C 192 128, 190 132, 186 132
+           L 10 132
            Z"
       />
-      {/* Sole: the line that makes the foot read as a boot rather than an L. */}
+      {/* Sole: one flat slab, so the boot stands level like a real one. */}
       <path
         className="boot__sole"
         vectorEffect="non-scaling-stroke"
-        d="M 12 136 L 188 136"
+        d="M 6 132
+           L 194 132
+           L 194 143
+           Q 194 149 188 149
+           L 12 149
+           Q 6 149 6 143
+           Z"
       />
+      {/* Two laces hanging off the instep, each ending in its aglet. */}
+      <g className="boot__laces">
+        <path
+          vectorEffect="non-scaling-stroke"
+          d="M 106 102 C 104 110, 107 115, 109 119"
+        />
+        <path
+          vectorEffect="non-scaling-stroke"
+          d="M 120 104 C 119 112, 122 117, 124 121"
+        />
+      </g>
+      <g className="boot__aglets">
+        <circle cx="109" cy="120" r="2.6" />
+        <circle cx="124" cy="122" r="2.6" />
+      </g>
     </svg>
   );
 }
