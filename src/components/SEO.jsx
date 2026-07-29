@@ -2,48 +2,12 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const SITE_URL = 'https://spanishbyheart.com';
-const SITE_NAME = 'Spanish by Heart';
-const DEFAULT_IMAGE = `${SITE_URL}/social-preview.svg`;
-
-const pageMeta = {
-  '/': {
-    title: 'Online Spanish Lessons Worldwide | Spanish by Heart with Mehrsa',
-    description:
-      'Online Spanish lessons with Mehrsa for students worldwide. Learn Spanish in English or Persian, from A1 beginner to C2, with conversation practice and DELE/SIELE exam prep.',
-  },
-  '/about': {
-    title: 'About Mehrsa | Online Spanish Teacher',
-    description:
-      'Meet Mehrsa, a trilingual online Spanish teacher offering friendly lessons for English and Persian speakers worldwide.',
-  },
-  '/classes': {
-    title: 'Online Spanish Classes | Private, Group and Exam Prep',
-    description:
-      'Choose private online Spanish lessons, small group Spanish classes, conversation practice, or DELE and SIELE preparation in English or Persian.',
-  },
-  '/testimonials': {
-    title: 'Student Reviews | Spanish Lessons with Mehrsa',
-    description:
-      'Read student reviews for Spanish lessons with Mehrsa, including Persian and English-speaking learners from beginner to advanced levels.',
-  },
-  '/faq': {
-    title: 'Online Spanish Lessons FAQ | English and Persian Support',
-    description:
-      'Answers about online Spanish classes, Persian and English instruction, lesson levels, pricing, scheduling, DELE and SIELE prep.',
-  },
-  '/contact': {
-    title: 'Book Online Spanish Lessons | Contact Mehrsa',
-    description:
-      'Book a free trial online Spanish lesson with Mehrsa. Private and group lessons for English and Persian speakers worldwide.',
-  },
-  // Study material — reachable by direct link only, not in the sitemap or nav yet.
-  '/irregular-verbs': {
-    title: 'Spanish Irregular Verbs in the Present Tense | Spanish by Heart',
-    description:
-      'All the irregular Spanish verbs of the present indicative, grouped by type of change, with six conjugations, example sentences and a practice quiz.',
-  },
-};
+import {
+  DEFAULT_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  metaForPath,
+} from '../seo/pages.js';
 
 const persianKeywords = [
   'کلاس آنلاین اسپانیایی',
@@ -102,9 +66,8 @@ function setJsonLd(id, data) {
 export default function SEO() {
   const location = useLocation();
   const { i18n, t } = useTranslation();
-  const path = pageMeta[location.pathname] ? location.pathname : '/';
-  const meta = pageMeta[path];
-  const canonical = `${SITE_URL}${path === '/' ? '/' : path}`;
+  const meta = metaForPath(location.pathname);
+  const { path, canonical } = meta;
 
   useEffect(() => {
     const locale = i18n.resolvedLanguage || 'en';
@@ -123,7 +86,9 @@ export default function SEO() {
     document.head.querySelector('meta[name="geo.placename"]')?.remove();
     setMeta('meta[name="robots"]', {
       identifiers: { name: 'robots' },
-      content: 'index, follow, max-image-preview:large',
+      content: meta.noindex
+        ? 'noindex, follow'
+        : 'index, follow, max-image-preview:large',
     });
     setMeta('meta[property="og:title"]', {
       identifiers: { property: 'og:title' },
@@ -139,7 +104,7 @@ export default function SEO() {
     });
     setMeta('meta[property="og:url"]', {
       identifiers: { property: 'og:url' },
-      content: canonical,
+      content: canonical || SITE_URL,
     });
     setMeta('meta[property="og:image"]', {
       identifiers: { property: 'og:image' },
@@ -169,7 +134,10 @@ export default function SEO() {
       identifiers: { name: 'twitter:image' },
       content: DEFAULT_IMAGE,
     });
-    setLink('canonical', canonical);
+    // An unknown path has no canonical of its own — drop the tag rather than
+    // pointing a 404 at the homepage.
+    if (canonical) setLink('canonical', canonical);
+    else document.head.querySelector('link[rel="canonical"]')?.remove();
 
     const faqItems = t('faq.items', { returnObjects: true });
     const hasFaq = Array.isArray(faqItems) && faqItems.length > 0;
@@ -227,7 +195,15 @@ export default function SEO() {
     }
 
     setJsonLd('structured-data', graph);
-  }, [canonical, i18n.resolvedLanguage, meta.description, meta.title, path, t]);
+  }, [
+    canonical,
+    i18n.resolvedLanguage,
+    meta.description,
+    meta.noindex,
+    meta.title,
+    path,
+    t,
+  ]);
 
   return null;
 }
