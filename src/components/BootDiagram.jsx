@@ -28,6 +28,19 @@ function isClassicBoot(boot) {
 }
 
 /**
+ * One lace, as a relative curve, plus the offset of its far end. Both laces
+ * draw this same string from a different start point, so they are exact
+ * translations of each other: identical shape, parallel, aglets in step.
+ */
+const LACE_CURVE = 'c -3 8, -6 15, -8 20';
+const LACE_END = { dx: -8, dy: 20 };
+/** Start points, taken on the instep line so each lace hangs off the leather. */
+const LACE_STARTS = [
+  { x: 86, y: 91.4 },
+  { x: 99, y: 93.9 },
+];
+
+/**
  * Hand-drawn boot over the 2×3 grid of forms, traced from the lesson sketch.
  *
  * Coordinates: the cells occupy 200×150 (each cell 100×50). The viewBox is 10
@@ -78,18 +91,23 @@ function BootOutline() {
       />
       {/* Two laces off the instep, hanging back towards the heel. */}
       <g className="boot__laces">
-        <path
-          vectorEffect="non-scaling-stroke"
-          d="M 86 91 C 83 99, 80 106, 78 111"
-        />
-        <path
-          vectorEffect="non-scaling-stroke"
-          d="M 99 94 C 96 102, 92 108, 89 113"
-        />
+        {LACE_STARTS.map(({ x, y }) => (
+          <path
+            key={x}
+            vectorEffect="non-scaling-stroke"
+            d={`M ${x} ${y} ${LACE_CURVE}`}
+          />
+        ))}
       </g>
       <g className="boot__aglets">
-        <circle cx="78" cy="112" r="2.6" />
-        <circle cx="89" cy="114" r="2.6" />
+        {LACE_STARTS.map(({ x, y }) => (
+          <circle
+            key={x}
+            cx={x + LACE_END.dx}
+            cy={y + LACE_END.dy}
+            r="2.6"
+          />
+        ))}
       </g>
     </svg>
   );
