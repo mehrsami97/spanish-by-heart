@@ -1,0 +1,26 @@
+.collapse {
+  overflow: hidden;
+  transition:
+    height 340ms cubic-bezier(0.32, 0.72, 0, 1),
+    opacity 240ms ease;
+  will-change: height;
+}
+
+.collapse.is-closed {
+  opacity: 0;
+}
+
+.collapse.is-open {
+  opacity: 1;
+}
+
+/* Content itself drifts up slightly on close so nothing snaps out of view. */
+.collapse__inner {
+  transition: transform 300ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.collapse.is-closed .collapse__inner {
+  transform: translateY(-6px);
+}
+.collapse.is-open .collapse__inner {
+  transform: none;
+}

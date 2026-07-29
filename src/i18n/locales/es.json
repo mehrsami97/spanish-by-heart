@@ -232,6 +232,108 @@
       "social": "Sígueme"
     }
   },
+  "verbs": {
+    "hero": {
+      "eyebrow": "Presente de indicativo",
+      "title": "Verbos irregulares — Presente",
+      "subtitle": "Todos los verbos irregulares de la lección, agrupados por el tipo de cambio. Seis conjugaciones por verbo, dos frases de ejemplo por forma y un test para comprobar lo que sabes."
+    },
+    "stats": {
+      "verbs": "verbos",
+      "types": "tipos",
+      "forms": "conjugaciones",
+      "examples": "frases de ejemplo"
+    },
+    "toolbar": {
+      "search": "Busca un verbo o su significado… (cerrar, dormir, poder)",
+      "quiz": "Modo test",
+      "expandAll": "Abrir todo",
+      "collapseAll": "Cerrar todo",
+      "results_one": "{{count}} verbo encontrado",
+      "results_other": "{{count}} verbos encontrados",
+      "total": "{{verbs}} verbos · {{types}} tipos",
+      "noResults": "No hay nada para «{{q}}». Prueba con una palabra más corta.",
+      "clear": "Borrar la búsqueda",
+      "top": "Volver arriba"
+    },
+    "howto": {
+      "title": "Cómo trabajar esta página",
+      "steps": [
+        "Empieza por la <b>chuleta</b> de abajo: los 13 tipos con su patrón y un verbo modelo para cada uno. Esa tabla es todo el sistema.",
+        "Ve tipo por tipo. Lee la regla, luego el truco de memoria y después mira <b>la bota</b>: las cuatro formas que cambian van dentro, <i>nosotros</i> y <i>vosotros</i> se quedan fuera.",
+        "Abre un verbo y lee las seis formas en voz alta. Las <b>letras rojas subrayadas</b> son lo único que hay que recordar; el resto sigue las terminaciones normales.",
+        "Después entra en <b>Modo test</b> y produce las formas de memoria. Repite solo las que falles."
+      ]
+    },
+    "cheat": {
+      "title": "Chuleta — todo el sistema en una pantalla",
+      "subtitle": "13 tipos de irregularidad, un verbo modelo para cada uno. Toca un tipo para ir a él.",
+      "type": "Tipo",
+      "change": "Cambio",
+      "model": "Verbo modelo → yo",
+      "verbs": "Verbos del grupo",
+      "jump": "Chuleta"
+    },
+    "toc": {
+      "title": "Ir a un tipo"
+    },
+    "boot": {
+      "title": "la bota"
+    },
+    "verb": {
+      "yo": "yo →"
+    },
+    "legend": {
+      "marks": "<b>Letras rojas subrayadas</b> = la parte irregular de la forma.",
+      "rows": "Filas sombreadas = las formas que sí cambian.",
+      "boot": "<b>La bota</b> = el cambio de raíz afecta a yo / tú / él / ellos, pero nunca a nosotros / vosotros."
+    },
+    "quiz": {
+      "eyebrow": "Práctica",
+      "title": "Modo test",
+      "subtitle": "Elige qué practicar y cómo responder. Las preguntas se centran en las formas que sí cambian.",
+      "close": "Cerrar el test",
+      "scope": "Tipos a practicar",
+      "selectAll": "Seleccionar todo",
+      "clearAll": "Quitar todo",
+      "mode": "Cómo responder",
+      "mode_type": "Escribir",
+      "mode_choice": "Elegir",
+      "mode_mixed": "Mixto",
+      "modeHint_type": "Escribes la forma tú mismo: lo más difícil y lo que más enseña. Tienes teclas de acentos.",
+      "modeHint_choice": "Eliges entre cuatro formas del mismo verbo. Va bien la primera vez que ves un tipo.",
+      "modeHint_mixed": "Una mezcla aleatoria de escribir y elegir.",
+      "length": "Preguntas",
+      "lengthHint": "Unas tres cuartas partes de las preguntas caen en formas irregulares.",
+      "start": "Empezar el test",
+      "cancel": "Cancelar",
+      "pickOne": "Elige al menos un tipo.",
+      "progress": "Pregunta {{n}} de {{total}}",
+      "score": "{{score}} / {{total}} correctas",
+      "streak": "Racha: {{n}}",
+      "conjugateFor": "Conjuga para",
+      "inputPlaceholder": "escribe la forma…",
+      "check": "Comprobar",
+      "skip": "Saltar",
+      "next": "Siguiente",
+      "finish": "Ver resultados",
+      "right": "¡Correcto!",
+      "almost": "Casi — mira el acento.",
+      "almostHint": "Las letras están bien, el acento escrito no. En español el acento es parte de la ortografía.",
+      "nope": "No es eso.",
+      "resultsEyebrow": "Resultados",
+      "resultsTitle": "Test terminado",
+      "perfect": "¡Sin fallos!",
+      "bestStreak": "mejor racha",
+      "toReview": "por repasar",
+      "time": "tiempo",
+      "missedTitle": "Formas para repasar",
+      "skipped": "saltada",
+      "retryMissed": "Repetir los fallos",
+      "newQuiz": "Nuevo test",
+      "done": "Listo"
+    }
+  },
   "footer": {
     "tagline": "Clases de español cercanas y personales en inglés y persa. Tu camino hacia la fluidez empieza aquí.",
     "explore": "Explora",

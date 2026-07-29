@@ -9,6 +9,7 @@ import Classes from './pages/Classes.jsx';
 import Testimonials from './pages/Testimonials.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Contact from './pages/Contact.jsx';
+import IrregularVerbs from './pages/IrregularVerbs.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 function ScrollToTop() {
@@ -36,6 +37,8 @@ export default function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          {/* Study material — not linked from the site navigation yet. */}
+          <Route path="/irregular-verbs" element={<IrregularVerbs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

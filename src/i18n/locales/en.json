@@ -249,6 +249,108 @@
       "social": "Follow along"
     }
   },
+  "verbs": {
+    "hero": {
+      "eyebrow": "Present indicative",
+      "title": "Irregular Verbs — Presente",
+      "subtitle": "Every irregular verb from the lesson, grouped by the kind of change it makes. Six conjugations each, two example sentences per form, and a quiz to test yourself."
+    },
+    "stats": {
+      "verbs": "verbs",
+      "types": "types",
+      "forms": "conjugations",
+      "examples": "example sentences"
+    },
+    "toolbar": {
+      "search": "Search a verb or meaning… (cerrar, sleep, poder)",
+      "quiz": "Quiz mode",
+      "expandAll": "Expand all",
+      "collapseAll": "Collapse all",
+      "results_one": "{{count}} matching verb",
+      "results_other": "{{count}} matching verbs",
+      "total": "{{verbs}} verbs · {{types}} types",
+      "noResults": "Nothing matches “{{q}}”. Try a shorter word.",
+      "clear": "Clear search",
+      "top": "Back to top"
+    },
+    "howto": {
+      "title": "How to work through this page",
+      "steps": [
+        "Start with the <b>cheat sheet</b> below — the 13 types with their pattern and one model verb each. That single table is the whole system.",
+        "Take one type at a time. Read the rule, then the memory hook, then look at <b>the boot</b>: the four forms that change sit inside it, <i>nosotros</i> and <i>vosotros</i> stay outside.",
+        "Open a verb and read the six forms out loud. The <b>red underlined letters</b> are the only part you have to remember — everything else follows the normal endings.",
+        "Then switch to <b>Quiz mode</b> and produce the forms from memory. Redo only the ones you missed."
+      ]
+    },
+    "cheat": {
+      "title": "Cheat sheet — the whole system on one screen",
+      "subtitle": "13 types of irregularity, one model verb each. Tap a type to jump to it.",
+      "type": "Type",
+      "change": "Change",
+      "model": "Model verb → yo",
+      "verbs": "Verbs in this group",
+      "jump": "Cheat sheet"
+    },
+    "toc": {
+      "title": "Jump to a type"
+    },
+    "boot": {
+      "title": "the boot"
+    },
+    "verb": {
+      "yo": "yo →"
+    },
+    "legend": {
+      "marks": "<b>Red underlined letters</b> = the irregular part of the form.",
+      "rows": "Shaded rows = the forms that actually change.",
+      "boot": "<b>The boot</b> = stem changes hit yo / tú / él / ellos, but never nosotros / vosotros."
+    },
+    "quiz": {
+      "eyebrow": "Practice",
+      "title": "Quiz mode",
+      "subtitle": "Pick what to drill and how you want to answer. Questions favour the forms that actually change.",
+      "close": "Close quiz",
+      "scope": "Types to drill",
+      "selectAll": "Select all",
+      "clearAll": "Clear all",
+      "mode": "How to answer",
+      "mode_type": "Type it",
+      "mode_choice": "Pick it",
+      "mode_mixed": "Mixed",
+      "modeHint_type": "You write the form yourself — the hardest way and the one that teaches most. Accent keys are provided.",
+      "modeHint_choice": "Choose between four forms of the same verb. Good for a first pass over a new type.",
+      "modeHint_mixed": "A random mix of typing and choosing.",
+      "length": "Questions",
+      "lengthHint": "About three quarters of the questions land on forms that carry an irregularity.",
+      "start": "Start quiz",
+      "cancel": "Cancel",
+      "pickOne": "Pick at least one type to drill.",
+      "progress": "Question {{n}} of {{total}}",
+      "score": "{{score}} / {{total}} correct",
+      "streak": "Streak: {{n}}",
+      "conjugateFor": "Conjugate for",
+      "inputPlaceholder": "type the form…",
+      "check": "Check",
+      "skip": "Skip",
+      "next": "Next",
+      "finish": "See results",
+      "right": "Correct!",
+      "almost": "Almost — check the accent.",
+      "almostHint": "The letters are right, the written accent is not. In Spanish the accent is part of the spelling.",
+      "nope": "Not quite.",
+      "resultsEyebrow": "Results",
+      "resultsTitle": "Session complete",
+      "perfect": "Perfect run!",
+      "bestStreak": "best streak",
+      "toReview": "to review",
+      "time": "time",
+      "missedTitle": "Forms to go over again",
+      "skipped": "skipped",
+      "retryMissed": "Retry the misses",
+      "newQuiz": "New quiz",
+      "done": "Done"
+    }
+  },
   "footer": {
     "tagline": "Friendly, personal Spanish lessons in English and Persian. Your journey to fluency starts here.",
     "explore": "Explore",

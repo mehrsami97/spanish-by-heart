@@ -37,6 +37,12 @@ const pageMeta = {
     description:
       'Book a free trial online Spanish lesson with Mehrsa. Private and group lessons for English and Persian speakers worldwide.',
   },
+  // Study material — reachable by direct link only, not in the sitemap or nav yet.
+  '/irregular-verbs': {
+    title: 'Spanish Irregular Verbs in the Present Tense | Spanish by Heart',
+    description:
+      'All the irregular Spanish verbs of the present indicative, grouped by type of change, with six conjugations, example sentences and a practice quiz.',
+  },
 };
 
 const persianKeywords = [
