@@ -213,7 +213,7 @@
       "name": "نام شما",
       "namePlaceholder": "مثلاً سارا",
       "email": "ایمیل",
-      "emailPlaceholder": "you@example.com",
+      "emailPlaceholder": "آدرس ایمیل شما",
       "level": "سطح فعلی شما",
       "levelOptions": ["کاملاً مبتدی", "مبتدی A1–A2", "متوسط B1–B2", "پیشرفته C1–C2", "مطمئن نیستم"],
       "language": "زبان ترجیحی کلاس",

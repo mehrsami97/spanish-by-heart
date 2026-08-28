@@ -9,6 +9,9 @@ import {
   metaForPath,
 } from '../seo/pages.js';
 
+const CONTACT_EMAIL = 'mehrsa.mi97@gmail.com';
+const CONTACT_PHONE = '+374 55 585695';
+
 const persianKeywords = [
   'کلاس آنلاین اسپانیایی',
   'آموزش آنلاین زبان اسپانیایی',
@@ -150,6 +153,8 @@ export default function SEO() {
         alternateName: ['Mehrsa Spanish Teacher', 'Mehrsa', ...persianKeywords],
         url: SITE_URL,
         image: DEFAULT_IMAGE,
+        email: CONTACT_EMAIL,
+        telephone: CONTACT_PHONE,
         description:
           'Online Spanish lessons for students worldwide, including private lessons, small group classes, conversation practice, and DELE/SIELE preparation with English or Persian support.',
         areaServed: { '@type': 'Place', name: 'Worldwide' },

@@ -230,7 +230,7 @@
       "name": "Your name",
       "namePlaceholder": "e.g. Sara",
       "email": "Email",
-      "emailPlaceholder": "you@example.com",
+      "emailPlaceholder": "Your email address",
       "level": "Your current level",
       "levelOptions": ["Complete beginner", "A1–A2 Beginner", "B1–B2 Intermediate", "C1–C2 Advanced", "Not sure"],
       "language": "Preferred lesson language",

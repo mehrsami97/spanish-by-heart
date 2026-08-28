@@ -9,6 +9,10 @@ const EXPLORE = [
   { key: 'faq', to: '/faq' },
 ];
 
+const CONTACT_EMAIL = 'mehrsa.mi97@gmail.com';
+const CONTACT_PHONE = '+374 55 585695';
+const CONTACT_WHATSAPP = 'https://wa.me/37455585695';
+
 export default function Footer() {
   const { t } = useTranslation();
   const year = 2026;
@@ -37,9 +41,9 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>{t('footer.contact')}</h4>
-          <a href="mailto:hola@mehrsa.com">hola@mehrsa.com</a>
-          <a href="https://wa.me/0000000000" target="_blank" rel="noreferrer">
-            WhatsApp
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+          <a href={CONTACT_WHATSAPP} target="_blank" rel="noreferrer">
+            {CONTACT_PHONE}
           </a>
           <Link to="/contact">{t('nav.cta')}</Link>
         </div>

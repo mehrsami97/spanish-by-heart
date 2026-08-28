@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 import Reveal from '../components/Reveal.jsx';
 import './Contact.css';
 
+const CONTACT_EMAIL = 'mehrsa.mi97@gmail.com';
+const CONTACT_PHONE = '+374 55 585695';
+const CONTACT_WHATSAPP = 'https://wa.me/37455585695';
+
 export default function Contact() {
   const { t } = useTranslation();
   const [sent, setSent] = useState(false);
@@ -100,23 +104,23 @@ export default function Contact() {
           {/* Direct contact */}
           <Reveal className="contact__direct" delay={100}>
             <h2>{t('contact.direct.title')}</h2>
-            <a className="contact__method card" href="mailto:hola@mehrsa.com">
+            <a className="contact__method card" href={`mailto:${CONTACT_EMAIL}`}>
               <span className="contact__method-icon">✉️</span>
               <span>
                 <small>{t('contact.direct.email')}</small>
-                <strong>hola@mehrsa.com</strong>
+                <strong>{CONTACT_EMAIL}</strong>
               </span>
             </a>
             <a
               className="contact__method card"
-              href="https://wa.me/0000000000"
+              href={CONTACT_WHATSAPP}
               target="_blank"
               rel="noreferrer"
             >
               <span className="contact__method-icon">💬</span>
               <span>
                 <small>{t('contact.direct.whatsapp')}</small>
-                <strong>+00 000 000 000</strong>
+                <strong>{CONTACT_PHONE}</strong>
               </span>
             </a>
             <div className="contact__method card">

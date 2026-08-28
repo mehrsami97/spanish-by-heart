@@ -213,7 +213,7 @@
       "name": "Tu nombre",
       "namePlaceholder": "p. ej. Sara",
       "email": "Correo",
-      "emailPlaceholder": "tu@ejemplo.com",
+      "emailPlaceholder": "Tu correo electrónico",
       "level": "Tu nivel actual",
       "levelOptions": ["Principiante total", "Principiante A1–A2", "Intermedio B1–B2", "Avanzado C1–C2", "No estoy seguro"],
       "language": "Idioma preferido para la clase",
