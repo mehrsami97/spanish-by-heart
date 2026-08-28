@@ -120,7 +120,9 @@ export default function Contact() {
               <span className="contact__method-icon">💬</span>
               <span>
                 <small>{t('contact.direct.whatsapp')}</small>
-                <strong>{CONTACT_PHONE}</strong>
+                <strong>
+                  <bdi dir="ltr">{CONTACT_PHONE}</bdi>
+                </strong>
               </span>
             </a>
             <div className="contact__method card">

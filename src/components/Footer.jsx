@@ -43,7 +43,7 @@ export default function Footer() {
           <h4>{t('footer.contact')}</h4>
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
           <a href={CONTACT_WHATSAPP} target="_blank" rel="noreferrer">
-            {CONTACT_PHONE}
+            <bdi dir="ltr">{CONTACT_PHONE}</bdi>
           </a>
           <Link to="/contact">{t('nav.cta')}</Link>
         </div>
