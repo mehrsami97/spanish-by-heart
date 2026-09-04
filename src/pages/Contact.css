@@ -78,6 +78,9 @@
   font-family: var(--serif);
   max-width: 30ch;
 }
+.contact__again {
+  margin-top: 0.25rem;
+}
 
 /* Direct */
 .contact__direct h2 {
@@ -150,4 +153,28 @@ a.contact__method:hover {
   .field--half {
     grid-column: 1 / -1;
   }
+}
+
+/* Honeypot — off-screen rather than display:none, which some bots skip. */
+.contact__honeypot {
+  position: absolute;
+  inset-inline-start: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.contact__error {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: #fdecec;
+  border: 1px solid #f3c2c2;
+  color: #9b2c2c;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.contact__submit:disabled {
+  opacity: 0.65;
+  cursor: progress;
 }

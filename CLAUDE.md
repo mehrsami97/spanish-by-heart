@@ -40,8 +40,10 @@ GitHub Pages is a plain file server with no notion of client-side routes, so a d
 
 Two markup dialects live in that data and are rendered without `dangerouslySetInnerHTML`: asterisk pairs mark the irregular letters of a form (`c*ie*rro`), and `rule` / `mnemonic` / `note` may contain `<b>`/`<i>`/`<u>`. `src/utils/verbText.js` parses both (`parseInline`, `plainForm`, `isIrregular`); `src/components/RichText.jsx` renders them (`Rich`, `Form`). `src/components/VerbQuiz.jsx` is the practice overlay: it builds questions from the same data, weighting forms that actually carry an irregularity, draws multiple-choice distractors from the other persons of the same verb, and grades typed answers as correct / accent-only / wrong.
 
+**Backend**: the contact form posts to the NestJS API in the sibling folder `../spanish-by-heart-backend` (see its `README.md` / `ARCHITECTURE.md`). `src/api/client.js` wraps `fetch`, reads the base URL from `VITE_API_URL` (`.env.development` / `.env.production`, template in `.env.example`), and sends the active UI language as an `x-lang` header plus a `locale` field — the API returns already-translated success and error copy, so `Contact.jsx` renders `err.message` directly and only falls back to a local key (`contact.form.errorNetwork`) when the request never reached the server. The form also carries a hidden `company` honeypot input that must stay empty. After a successful send the form is replaced by the success panel, which offers `contact.form.sendAnother` to swap the (reset) form back in — `sent`/`sending`/`error` are the three pieces of state driving that panel. Run the API on `http://localhost:3000` while developing, and keep the site's origin listed in the API's `CORS_ORIGINS`.
+
 ## Known gaps
 
-- The contact form (`src/pages/Contact.jsx`) `handleSubmit` only sets local state — nothing is sent anywhere. Wiring it to an email service is still open.
+- Contact submissions depend on the sibling API being deployed and reachable; `VITE_API_URL` in `.env.production` is a placeholder until it is.
 - Photos are emoji placeholders (`👩🏻‍🏫`) in `Home.jsx` and `About.jsx`.
 - `NotFound.jsx` is the one page with hardcoded copy rather than translation keys.

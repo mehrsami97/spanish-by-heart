@@ -238,7 +238,10 @@
       "message": "Your message",
       "messagePlaceholder": "Tell me a little about your goals…",
       "submit": "Send message",
-      "success": "Thank you! Your message is on its way. I'll be in touch very soon. ✨"
+      "sending": "Sending…",
+      "sendAnother": "Send another message",
+      "success": "Thank you! Your message is on its way. I'll be in touch very soon. ✨",
+      "errorNetwork": "We couldn't reach the server. Please check your connection and try again."
     },
     "direct": {
       "title": "Prefer to reach out directly?",

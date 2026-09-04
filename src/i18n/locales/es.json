@@ -221,7 +221,10 @@
       "message": "Tu mensaje",
       "messagePlaceholder": "Cuéntame un poco sobre tus metas…",
       "submit": "Enviar mensaje",
-      "success": "¡Gracias! Tu mensaje va en camino. Me pondré en contacto muy pronto. ✨"
+      "sending": "Enviando…",
+      "sendAnother": "Enviar otro mensaje",
+      "success": "¡Gracias! Tu mensaje va en camino. Me pondré en contacto muy pronto. ✨",
+      "errorNetwork": "No pudimos conectar con el servidor. Comprueba tu conexión e inténtalo de nuevo."
     },
     "direct": {
       "title": "¿Prefieres contactar directamente?",

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Reveal from '../components/Reveal.jsx';
+import { apiPost } from '../api/client.js';
 import './Contact.css';
 
 const CONTACT_EMAIL = 'mehrsa.mi97@gmail.com';
@@ -8,15 +9,43 @@ const CONTACT_PHONE = '+374 55 585695';
 const CONTACT_WHATSAPP = 'https://wa.me/37455585695';
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(null);
   const levelOptions = t('contact.form.levelOptions', { returnObjects: true });
   const languageOptions = t('contact.form.languageOptions', { returnObjects: true });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Placeholder: wire up to email service / backend later.
-    setSent(true);
+    if (sending) return;
+
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    setSending(true);
+    setError(null);
+
+    try {
+      await apiPost('/contact', {
+        // The backend localizes its own reply mail from this locale.
+        lang: i18n.resolvedLanguage,
+        body: { ...data, locale: i18n.resolvedLanguage },
+      });
+      setSent(true);
+      e.target.reset();
+    } catch (err) {
+      // The API already speaks the visitor's language; only a dead network
+      // leaves us without a server-provided sentence to show.
+      setError(err.message === 'network' ? t('contact.form.errorNetwork') : err.message);
+    } finally {
+      setSending(false);
+    }
+  };
+
+  // Bring the empty form back so a visitor can send a follow-up without
+  // reloading the page.
+  const handleWriteAnother = () => {
+    setSent(false);
+    setError(null);
   };
 
   return (
@@ -36,12 +65,24 @@ export default function Contact() {
           {/* Form */}
           <Reveal className="card contact__form-card">
             {sent ? (
-              <div className="contact__success">
+              <div className="contact__success" role="status">
                 <span aria-hidden="true">🎉</span>
                 <p>{t('contact.form.success')}</p>
+                <button
+                  type="button"
+                  className="btn btn--ghost contact__again"
+                  onClick={handleWriteAnother}
+                >
+                  {t('contact.form.sendAnother')}
+                </button>
               </div>
             ) : (
-              <form className="contact__form" onSubmit={handleSubmit}>
+              <form className="contact__form" onSubmit={handleSubmit} noValidate={false}>
+                {/* Honeypot: invisible to people, tempting to bots. */}
+                <div className="contact__honeypot" aria-hidden="true">
+                  <label htmlFor="company">Company</label>
+                  <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+                </div>
                 <div className="field">
                   <label htmlFor="name">{t('contact.form.name')}</label>
                   <input
@@ -94,8 +135,17 @@ export default function Contact() {
                     placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
-                <button type="submit" className="btn btn--primary contact__submit">
-                  {t('contact.form.submit')}
+                {error && (
+                  <p className="contact__error" role="alert">
+                    {error}
+                  </p>
+                )}
+                <button
+                  type="submit"
+                  className="btn btn--primary contact__submit"
+                  disabled={sending}
+                >
+                  {sending ? t('contact.form.sending') : t('contact.form.submit')}
                 </button>
               </form>
             )}
