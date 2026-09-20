@@ -6,8 +6,14 @@
  */
 const BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:3000/api').replace(/\/$/, '');
 
-/** Give up rather than spin forever if the API never answers. */
-const TIMEOUT_MS = 20000;
+/**
+ * Give up rather than spin forever if the API never answers.
+ *
+ * Generous on purpose: the API sleeps when idle and takes over a minute to wake,
+ * and the submission is lost if we abort mid-flight. `warmUp` below is what
+ * keeps a real visitor from ever paying this.
+ */
+const TIMEOUT_MS = 90000;
 
 export class ApiError extends Error {
   constructor(message, { status, details } = {}) {
@@ -56,4 +62,17 @@ export async function apiPost(path, { body, lang, signal } = {}) {
   }
 
   return payload;
+}
+
+/**
+ * Wake the API without waiting for it.
+ *
+ * The host spins the service down when idle, so the first request after a quiet
+ * spell pays a ~70s boot. Pinging /health when the contact page mounts spends
+ * that boot while the visitor is still filling in the form, which is the
+ * difference between a form that answers instantly and one that looks hung.
+ * Nothing depends on the outcome, so failures are ignored.
+ */
+export function warmUp() {
+  fetch(`${BASE_URL}/health`, { signal: AbortSignal.timeout(TIMEOUT_MS) }).catch(() => {});
 }

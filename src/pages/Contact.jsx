@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Reveal from '../components/Reveal.jsx';
-import { apiPost } from '../api/client.js';
+import { apiPost, warmUp } from '../api/client.js';
 import './Contact.css';
 
 const CONTACT_EMAIL = 'mehrsa.mi97@gmail.com';
@@ -15,6 +15,9 @@ export default function Contact() {
   const [error, setError] = useState(null);
   const levelOptions = t('contact.form.levelOptions', { returnObjects: true });
   const languageOptions = t('contact.form.languageOptions', { returnObjects: true });
+
+  // Start the sleeping API booting now, while the form is still being filled in.
+  useEffect(() => warmUp(), []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
